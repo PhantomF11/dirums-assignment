@@ -34,7 +34,6 @@ const Header = ({setNewTask}) => {
                     <TaskModal open={taskModel} handleClose={handleTaskClose} setNewTask={setNewTask}></TaskModal>
 
                     <HeaderAvatar 
-                        src="https://boring-avatars-service.vercel.app/beam?name=Carrie%20Chapman"
                         alt="Carrie Chapman" />
                 </Toolbar>
             </AppBar>
@@ -47,7 +46,7 @@ function HeaderAvatar({src, alt}) {
         <Typography align="left" sx={{ marginRight: 1, 
             backgroundColor: "white", padding: 1, 
             borderRadius: 2 }}>{alt}</Typography>
-        <Avatar src={src} alt={alt} />
+        <Avatar alt={alt} />
     </>}
 
 function AddIcon() {
