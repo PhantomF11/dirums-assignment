@@ -13,7 +13,7 @@ export default function Main({newTask}) {
     const [doneArr, setDoneArr] = useState([]);
 
     useEffect(() => {
-        const mainArr = JSON.parse(localStorage.getItem("tasksList"))
+        const mainArr = JSON.parse(localStorage.getItem("tasksList")) ?? []
         setTodoArr(mainArr.filter(task => (task?.status === "to-do")))
         setInProgArr(mainArr.filter(task => (task?.status === "in-progress")))
         setDoneArr(mainArr.filter(task => (task?.status === "done")))
